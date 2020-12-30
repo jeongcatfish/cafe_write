@@ -4,14 +4,14 @@ import urllib.request
 from urllib.error import HTTPError
 from urllib.parse import urlencode
 subject = "안녕하세요"
-content = "안녕" \
+content= "안녕" \
           "<br><font color=blue>파란색 글씨</font>" \
           "<img src='https://dummyimage.com/600x400/000/fff&text=TEST+x+TEST' alt=''>"
 def naver_cafe_post(subject, content):
-    token = "AAAAOlICoLOLerJaTkYweCP2-BHBq_Ka2lmxmsOpXr8fOmAywaG69TV2xfBveepyHIAxP79OpUYPGw9Jw4mfw4szL0M"
+    token = "AAAAObwxOxCPPCFFMl6ZzIlPaRKRxc7trT2nKh3O-3L7VORvl3qtI2QVW6qaIHgxp8AX3ckz0Ezgc6kmuF_KnUsvIUI"
     header = "Bearer " + token  # Bearer 다음에 공백 추가
     clubid = '10115532'
-    menuid = '1716'
+    menuid = '1713'
     url = "https://openapi.naver.com/v1/cafe/" + clubid + "/menu/" + menuid + "/articles"
 
     subject = urllib.parse.quote(subject)
